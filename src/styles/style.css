@@ -1,0 +1,90 @@
+body {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .btn-primary {
+    color: purple;
+    padding: 0.5rem 1.3rem;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+  }
+  
+  .my-pattern {
+    background-color: #F9FAFB;
+    background-image: radial-gradient(circle, #9CA3AF 0%, transparent 10%), radial-gradient(circle, #9CA3AF 0%, transparent 10%);
+    background-size: 35px 30px;
+    background-position: 0 0, 100 100;
+  }
+  
+  .my-pattern-1 {
+    background-color: #FFF;
+    background-image: radial-gradient(circle, #9CA3AF 0%, transparent 10%), radial-gradient(circle, #9CA3AF 0%, transparent 10%);
+    background-size: 35px 30px;
+    background-position: 0 0, 100 100;
+  }
+  
+  //Loading spiiners
+  .lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #1d4ed8 transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+.custom-bg{
+  background-color: #F9FAFB
+}
+
+.bg-primary{
+  background-color: #1D4ED8
+}
+
+.custom-font{
+  font-family: Merriweather;
+}
+  
+
+.zoom{
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.1); 
+}
+
+.zoom-sm{
+  transition: transform .2s;
+}
+.zoom-sm:hover {
+  transform: scale(1.01);
+}
