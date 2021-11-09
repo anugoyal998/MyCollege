@@ -1,7 +1,12 @@
 import React from 'react'
 //components
-import { Content } from './Content'
 import { Navbar } from './Navbar'
+import { Content } from './Content'
+import { Featured } from '../featured/Featured'
+import { EngDepartments } from '../engDepartments/EngDepartments'
+import { Team } from '../team/Team'
+import { ContactUs } from '../contactus/ContactUs'
+import { SubscribeUpdates } from '../subscribeToUpdates/SubscribeUpdates'
 
 export const Home = () => {
     return (
@@ -10,7 +15,12 @@ export const Home = () => {
             <Navbar rightPat={true} />  
             <Content/>
             <div className="my-pattern absolute bottom-0 hidden lg:block" style={{width: '17vw', height: '50vh'}}></div>
-        </div>
+            </div>
+            <Featured/>
+            <EngDepartments/>
+            <Team/>
+            <ContactUs/>
+            <SubscribeUpdates/>
         </div>
     )
 }
