@@ -1,5 +1,6 @@
 const mailListSchema = require('../model/mailListSchema')
 const authSchema = require('../model/authSchema')
+
 const addToMailList = async (req,res) => {
     try {
         const findData = await authSchema.find({gid: req.body.gid})
@@ -19,7 +20,6 @@ const addToMailList = async (req,res) => {
         res.status(400).json("An Error occurred",error)
     }
 }
-
 module.exports = {
     addToMailList
 }
