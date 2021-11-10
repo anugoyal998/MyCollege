@@ -1,5 +1,6 @@
 import React from "react";
 import { LongButton } from "../../styles/global";
+import {Link} from 'react-router-dom'
 
 export const Content = () => {
   return (
@@ -25,11 +26,13 @@ export const Content = () => {
         </p>
       </div>
       <div className="flex lg:mt-3 mt-1">
+        <Link to="/study-corner">
         <LongButton className="bg-blue-700 text-white mx-3">
-          Get Started
+          Study Corner
         </LongButton>
+        </Link>
         <LongButton className="text-blue-700 bg-white mx-3">
-          Get Started
+          PYQs
         </LongButton>
       </div>
     </div>

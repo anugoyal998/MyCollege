@@ -6,3 +6,5 @@ export const SET_ALL_NOTES = 'SET_ALL_NOTES'
 export const SET_SEARCH_NOTES = 'SET_SEARCH_NOTES'
 
 export const SET_BRANCH = 'SET_BRANCH';
+
+export const SET_UPDATE = 'SET_UPDATE'
