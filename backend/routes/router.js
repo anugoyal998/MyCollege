@@ -16,5 +16,10 @@ router.post("/upload/notes", upload2Drive);
 router.post("/get/notes/url",getNotesUrl);
 router.post('/save/notes/db',saveNotesToDB)
 
+//search notes
+const {searchBranchNotes, searchAllNotes} = require('../controllers/searchNotes')
+router.post('/search/branch/notes',searchBranchNotes)
+router.post('/search/all/notes',searchAllNotes)
+
 
 module.exports = router;

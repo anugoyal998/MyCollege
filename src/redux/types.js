@@ -1,1 +1,8 @@
 export const SET_AUTH = 'SET_AUTH'
+
+export const SET_NOTES_BRANCH = 'SET_NOTES_BRANCH';
+export const RESET_NOTES_BRANCH = 'RESET_NOTES_BRANCH'
+export const SET_ALL_NOTES = 'SET_ALL_NOTES'
+export const SET_SEARCH_NOTES = 'SET_SEARCH_NOTES'
+
+export const SET_BRANCH = 'SET_BRANCH';

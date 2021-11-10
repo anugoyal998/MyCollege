@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import {useDispatch} from 'react-redux'
 import axios from "axios"
-// import {setAllNotesAction} from '../../redux/actions/branchNotes.action'
+import {setAllNotesAction} from '../../redux/actions/branchNotes.action'
 //images
 import computer from "../../img/computer.jpg";
 import it from "../../img/it.jpg";
@@ -55,14 +55,14 @@ const arr = [
 
 export const EngDepartments = () => {
   const dispatch = useDispatch()
-//   useEffect(async () => {
-//     try{
-//       const response = await axios.post(`${process.env.REACT_APP_SERVER_BASE_URL}/search/all/notes`)
-//       dispatch(setAllNotesAction(response.data))
-//     }catch(err){
-//       console.log("error in all notes",err)
-//     }
-//   })
+  useEffect(async () => {
+    try{
+      const response = await axios.post(`${process.env.REACT_APP_SERVER_BASE_URL}/search/all/notes`)
+      dispatch(setAllNotesAction(response.data))
+    }catch(err){
+      // console.log("error in all notes",err)
+    }
+  })
   return (
     <div className="custom-bg text-center pt-8" id="engDept">
       <p className="lg:text-4xl text-3xl custom-font font-extrabold">
