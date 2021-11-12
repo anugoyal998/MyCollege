@@ -5,6 +5,7 @@ import { Content } from './Content'
 import { Featured } from '../featured/Featured'
 import { EngDepartments } from '../engDepartments/EngDepartments'
 import { Team } from '../team/Team'
+import { Team1 } from '../team/Team1'
 import { ContactUs } from '../contactus/ContactUs'
 import { SubscribeUpdates } from '../subscribeToUpdates/SubscribeUpdates'
 
@@ -18,7 +19,8 @@ export const Home = () => {
             </div>
             <Featured/>
             <EngDepartments/>
-            <Team/>
+            {/* <Team/> */}
+            <Team1/>
             <ContactUs/>
             <SubscribeUpdates/>
         </div>

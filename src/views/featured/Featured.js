@@ -6,7 +6,7 @@ export const Featured = () => {
             <p className="lg:text-4xl text-2xl font-extrabold" style={{ fontFamily: "Merriweather" }} >MyCollege Featured</p>
             {/* <p className="text-gray-400 px-72 text-lg" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia pousto id ea velit incsimilique corporis modi, dolores veritatis cupiditate repellat sed.</p> */}
             <div className="grid grid-cols-2 mt-2" >
-                <MyCard title="All Branches Study Material" />
+                <MyCard title="All Branches Study Material" desc="" />
                 <MyCard title="All Updates from NIT KKR" />
                 <MyCard title="PYQs" />
                 <MyCard title="Senior's Guidance" />
