@@ -27,7 +27,8 @@ export const SubscribeUpdates = () => {
     }
     try {
       const url = 'http://localhost:5000'
-      await axios.post(`${url}/add/mail/list`,user)
+      // await axios.post(`${url}/add/mail/list`,user)
+      await axios.post(`/add/mail/list`,user)
       toast.success("Email Added to mailing list")
       setEmail("")
       setLoading(prev => false)

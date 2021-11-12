@@ -5,7 +5,8 @@ export const updatesFunction = async () => {
   //scrap api data
   let scrapData = [];
   try {
-    const response = await axios.get(`${url}/scrap/api`);
+    // const response = await axios.get(`${url}/scrap/api`);
+    const response = await axios.get(`/scrap/api`);
     scrapData = response.data;
     scrapData = _.take(scrapData, 20);
   } catch (error) {
@@ -16,7 +17,8 @@ export const updatesFunction = async () => {
   let dbData = [];
   let _id;
   try {
-    const response = await axios.get(`${url}/get/update/db`);
+    // const response = await axios.get(`${url}/get/update/db`);
+    const response = await axios.get(`/get/update/db`);
     dbData = response.data.updates;
     _id = response.data._id;
   } catch (error) {
@@ -31,7 +33,11 @@ export const updatesFunction = async () => {
   }
   //update db
   try {
-    const response = await axios.post(`${url}/update/db/updates`, {
+    // const response = await axios.post(`${url}/update/db/updates`, {
+    //   _id,
+    //   data: scrapData,
+    // });
+    const response = await axios.post(`/update/db/updates`, {
       _id,
       data: scrapData,
     });
@@ -41,7 +47,8 @@ export const updatesFunction = async () => {
   }
   //send mail
   try {
-    const response = await axios.post(`${url}/send/mail`);
+    // const response = await axios.post(`${url}/send/mail`);
+    const response = await axios.post(`/send/mail`);
     // console.log(response, "mail sent successfully");
   } catch (error) {
     // console.log("error in send mail: " + error);

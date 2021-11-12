@@ -29,7 +29,8 @@ export const DepartmentDetails1 = ({ match }) => {
   const dispatch = useDispatch();
   useEffect(async () => {
     try{
-      const response = await axios.post(`${process.env.REACT_APP_SERVER_BASE_URL}/search/branch/notes`,{title})
+      // const response = await axios.post(`${process.env.REACT_APP_SERVER_BASE_URL}/search/branch/notes`,{title})
+      const response = await axios.post(`/search/branch/notes`,{title})
       dispatch(setBranchNotesAction(response.data))
     }catch(err){
       console.log("err in notes branch",err)

@@ -29,7 +29,8 @@ export default function App() {
     // console.log(res);
     try {
       const url = process.env.REACT_APP_SERVER_BASE_URL;
-      const response = await axios.get(`${url}/get/update/db`);
+      // const response = await axios.get(`${url}/get/update/db`);
+      const response = await axios.get(`/get/update/db`);
       dispatch(setUpdateAction(response.data.updates));
     } catch (error) {
       console.log("error in setupdate redux");

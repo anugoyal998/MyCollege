@@ -58,7 +58,8 @@ const DrawerChild = ({ setOpen }) => {
     };
     try {
       const url = "http://localhost:5000";
-      await axios.post(`${url}/auth/add/user`, data);
+      // await axios.post(`${url}/auth/add/user`, data);
+      await axios.post(`/auth/add/user`, data);
     } catch (error) {
       toast.error("An error occurred");
       setTimeout(() => {

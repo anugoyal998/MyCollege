@@ -10,8 +10,11 @@ export const StudyCorner = () => {
   const dispatch = useDispatch();
   useEffect(async () => {
     try {
+      // const response = await axios.post(
+      //   `${process.env.REACT_APP_SERVER_BASE_URL}/search/all/notes`
+      // );
       const response = await axios.post(
-        `${process.env.REACT_APP_SERVER_BASE_URL}/search/all/notes`
+        `/search/all/notes`
       );
       dispatch(setAllNotesAction(response.data));
     } catch (err) {

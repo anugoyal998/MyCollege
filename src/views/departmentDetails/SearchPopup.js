@@ -10,7 +10,8 @@ export const SearchPopup = () => {
   useEffect(async () =>{
     if(allNotes.length > 0)return;
     try{
-      const response = await axios.post(`${process.env.REACT_APP_SERVER_BASE_URL}/search/all/notes`)
+      // const response = await axios.post(`${process.env.REACT_APP_SERVER_BASE_URL}/search/all/notes`)
+      const response = await axios.post(`/search/all/notes`)
       dispatch(setAllNotesAction(response.data))
     }catch(err){
       console.log("error in all notes",err)

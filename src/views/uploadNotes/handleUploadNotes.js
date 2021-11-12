@@ -21,7 +21,8 @@ export const handleUploadNotes = async (props) => {
   formData.append("file", file);
   let fileId;
   try {
-    const res = await axios.post(`${url}/upload/notes`, formData);
+    // const res = await axios.post(`${url}/upload/notes`, formData);
+    const res = await axios.post(`/upload/notes`, formData);
     fileId = res.data.id;
   } catch (err) {
     // console.log("error in upload ",err)
@@ -31,7 +32,8 @@ export const handleUploadNotes = async (props) => {
   }
   let notesUrl;
   try {
-    notesUrl = await axios.post(`${url}/get/notes/url`, { fileId });
+    // notesUrl = await axios.post(`${url}/get/notes/url`, { fileId });
+    notesUrl = await axios.post(`/get/notes/url`, { fileId });
   } catch (err) {
     // console.log("error in upload ",err)
     setLoading((prev) => false);
@@ -47,8 +49,31 @@ export const handleUploadNotes = async (props) => {
   }
   const webContentLink = notesUrl.data.webContentLink;
   const webViewLink = notesUrl.data.webViewLink;
+  // axios
+  //   .post(`${url}/save/notes/db`, {
+  //     subject,
+  //     chapter,
+  //     sem,
+  //     branch,
+  //     cc,
+  //     fileId,
+  //     webContentLink,
+  //     webViewLink,
+  //   })
+  //   .then((saveRes) => {
+  //     setLoading((pre) => false);
+  //     toast.success("Notes saved successfully");
+  //     setTimeout(() => {
+  //       window.location.reload();
+  //     }, 1000);
+  //   })
+  //   .catch((error) => {
+  //     // console.log("error in saving notes frontend", error);
+  //     setLoading((pre) => false);
+  //     toast.error("An error occurred");
+  //   });
   axios
-    .post(`${url}/save/notes/db`, {
+    .post(`/save/notes/db`, {
       subject,
       chapter,
       sem,
