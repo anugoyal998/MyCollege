@@ -43,7 +43,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "server": "nodemon server.js",
+    "server": "node server.js",
     "client-install": "npm install",
     "client-build": "npm run build",
     "heroku-postbuild": "npm run client-install && npm run client-build"
