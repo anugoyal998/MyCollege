@@ -25,7 +25,7 @@ export const SubscribeUpdates = () => {
       return
     }
     try {
-      const url = 'http://localhost:5000'
+      const url = process.env.REACT_APP_SERVER_BASE_URL
       // await axios.post(`${url}/add/mail/list`,user)
       await axios.post(`/add/mail/list`,user)
       toast.success("Email Added to mailing list")

@@ -10,7 +10,7 @@ export const handleUploadNotes = async (props) => {
   }
   branch = branch.toLowerCase();
   sem = sem.toLowerCase();
-  const url = process.env.REACT_APP_SERVER_BASE_URL || "https://localhost:5000";
+  const url = process.env.REACT_APP_SERVER_BASE_URL;
   //formdata
   const formData = new FormData();
   formData.append("subject", subject);

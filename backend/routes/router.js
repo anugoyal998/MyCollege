@@ -30,7 +30,7 @@ const {
   getUpdateDB,
   updateDBUpdates,
 } = require("../controllers/scrapApiController");
-const { sendMail } = require("../controllers/nodemailerController");
+const { sendMail } = require("../controllers/nodeMailerController");
 router.get("/scrap/api", scrapApiController);
 router.get("/get/update/db", getUpdateDB);
 router.post("/update/db/updates", updateDBUpdates);
