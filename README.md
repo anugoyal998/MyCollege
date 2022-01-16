@@ -71,3 +71,6 @@ You will also see any errors or information in the console.
 
 ![update](https://drive.google.com/uc?export=view&id=1uQ8U0mX5weBmY3BitJa7Br_GzHFctE2G)
 
+## Lighthouse Stats
+![Lighthouse Stats](https://drive.google.com/uc?export=view&id=1Em3Oh-k0DV77A6GJR41n_pKr4iOb5r89)
+
